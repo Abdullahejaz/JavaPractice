@@ -10,6 +10,12 @@ public class Main {
 
         Team<BaseballPlayer> baseballTeam = new Team<>("Chicago Bulls");
 
+        hawthorn.matchResult(fremantle, 1, 0);
+        hawthorn.matchResult(adelaideCrows, 3, 8);
+
+        adelaideCrows.matchResult(fremantle, 2, 1);
+
+
 
         footballLeague.add(adelaideCrows);
         footballLeague.add(melbourne);
@@ -17,5 +23,6 @@ public class Main {
         footballLeague.add(fremantle);
 
 
+        footballLeague.showLeagueTable();
     }
 }
