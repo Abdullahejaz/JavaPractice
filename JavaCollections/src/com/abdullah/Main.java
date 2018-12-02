@@ -44,7 +44,7 @@ public class Main {
             System.out.println(s);
         }
 
-        com.abdullah.Basket addyBasket = new com.abdullah.Basket("Tim");
+        com.abdullah.Basket addyBasket = new com.abdullah.Basket("Addy");
         sellItem(addyBasket, "car", 1);
         System.out.println(addyBasket);
 
