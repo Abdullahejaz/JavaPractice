@@ -1,14 +1,20 @@
 package com.abdullah;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HRService {
 
-Map<String , Employee> data = new HashMap<>();
+List<Employee> employeeData = new ArrayList<>();
 
-public static void addEmployee(){
+public void addEmployee(Employee employee){
 
+    if(employeeData.contains(employee)){
+        System.out.println("Employee " +employee.getFirstName() + " already exist");
+    }
+    else{
+        employeeData.add(employee);
+    }
 }
 
 public static void removeEmployee(){}
