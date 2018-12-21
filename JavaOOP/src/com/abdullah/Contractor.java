@@ -2,18 +2,24 @@ package com.abdullah;
 
 import java.util.Date;
 
-public class Contractor {
+public class Contractor extends JobType {
 
-    private Date start, end;
+    private Date end;
     private float hourlyRate;
 
-    public Date getStart() {
+    public Contractor(Date start, Date end, float hourlyRate) {
+        super(start);
+        this.end = end;
+        this.hourlyRate = hourlyRate;
+    }
+
+   /* public Date getStart() {
         return start;
     }
 
     public void setStart(Date start) {
         this.start = start;
-    }
+    }*/
 
     public Date getEnd() {
         return end;

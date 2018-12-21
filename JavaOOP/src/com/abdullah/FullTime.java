@@ -2,18 +2,23 @@ package com.abdullah;
 
 import java.util.Date;
 
-public class FullTime {
+public class FullTime extends JobType {
 
-    private Date start;
     private float baseSalaryPerYear, bonusPerYear;
 
-    public Date getStart() {
+    public FullTime(Date start, float baseSalaryPerYear, float bonusPerYear) {
+        super(start);
+        this.baseSalaryPerYear = baseSalaryPerYear;
+        this.bonusPerYear = bonusPerYear;
+    }
+
+    /* public Date getStart() {
         return start;
     }
 
     public void setStart(Date start) {
         this.start = start;
-    }
+    }*/
 
     public float getBaseSalaryPerYear() {
         return baseSalaryPerYear;
@@ -29,5 +34,9 @@ public class FullTime {
 
     public void setBonusPerYear(float bonusPerYear) {
         this.bonusPerYear = bonusPerYear;
+    }
+
+    public void addFukktime(){
+
     }
 }

@@ -1,11 +1,35 @@
 package com.abdullah;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Employee {
 
     private int id;
     private String firstName, lastName;
+    List<Employee> listOfEmployee = new ArrayList<>();
+    Phone phone;
+    Address address;
+
+    public Employee() {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Employee(int id, String firstName, String lastName, ArrayList<Role> role, Address address, JobType jobType ) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -27,17 +51,39 @@ public class Employee {
 
     }
 
-    public void add(){
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the first Name");
-        id = sc.nextInt();
-
-        System.out.println("Enter the first Name");
-        firstName = sc.nextLine();
-
-        System.out.println("Enter the Last Name");
-        firstName = sc.nextLine();
-
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
