@@ -1,13 +1,19 @@
 package com.abdullah;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class Company {
 
     private int id;
     private String name;
-    List<Employee> employeeList = new ArrayList<>();
+    private Scanner sc = new Scanner(System.in);
+    //List<Employee> employeeList = new ArrayList<>();
+
+
+    public Company(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public int getId() {
         return id;
@@ -25,11 +31,20 @@ public class Company {
         this.name = name;
     }
 
-    public List<Employee> getEmployeeList() {
+    /*public List<Employee> getEmployeeList() {
         return employeeList;
     }
 
     public void setEmployeeList(List<Employee> employeeList) {
         this.employeeList = employeeList;
+    }*/
+
+    public Company addCompany(){
+        System.out.println("Please enter the id of the company");
+        id = sc.nextInt();
+        System.out.println("Please enter the name of the company");
+        name = sc.nextLine();
+
+        return new Company(id, name);
     }
 }

@@ -1,9 +1,12 @@
 package com.abdullah;
 
+import java.util.Scanner;
+
 public class Address {
 
     private int id;
     private String zip, country, state, city, line1, line2;
+    private Scanner sc = new Scanner(System.in);
 
     public Address(int id, String zip, String country, String state, String city, String line1, String line2) {
         this.id = id;
@@ -70,5 +73,24 @@ public class Address {
 
     public void setLine2(String line2) {
         this.line2 = line2;
+    }
+
+    public Address addAddress(){
+        System.out.println("Enter the id for the address");
+        id = sc.nextInt();
+        System.out.println("Enter the zip code");
+        zip = sc.nextLine();
+        System.out.println("Enter the name of the country");
+        country = sc.nextLine();
+        System.out.println("Enter the name of the state");
+        state = sc.nextLine();
+        System.out.println("Enter the name of the city");
+        city = sc.nextLine();
+        System.out.println("Enter the address in the first line.");
+        line1 = sc.nextLine();
+        System.out.println("Enter the address for the second line");
+        line2 = sc.nextLine();
+
+        return new Address(id, zip, country, state, city, line1, line2);
     }
 }

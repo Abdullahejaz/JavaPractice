@@ -1,31 +1,31 @@
 package com.abdullah;
 
-import java.util.Date;
+import java.util.Scanner;
 
-public class Contractor extends JobType {
+public class Contractor extends JobType{
 
-    private Date end;
+    private String start, end;
     private float hourlyRate;
+    private Scanner sc = new Scanner(System.in);
 
-    public Contractor(Date start, Date end, float hourlyRate) {
-        super(start);
+    public Contractor(String start, String end, float hourlyRate) {
         this.end = end;
         this.hourlyRate = hourlyRate;
     }
 
-   /* public Date getStart() {
+   public String getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(String start) {
         this.start = start;
-    }*/
+    }
 
-    public Date getEnd() {
+    public String getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(String end) {
         this.end = end;
     }
 
@@ -35,5 +35,16 @@ public class Contractor extends JobType {
 
     public void setHourlyRate(float hourlyRate) {
         this.hourlyRate = hourlyRate;
+    }
+
+    public Contractor addContractor(){
+        System.out.println("Enter the start date");
+        start = sc.nextLine();
+        System.out.println("Enter the end date");
+        end = sc.nextLine();
+        System.out.println("Enter the hourly rate");
+        hourlyRate = sc.nextByte();
+
+        return new Contractor(start, end, hourlyRate);
     }
 }
