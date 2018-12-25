@@ -10,14 +10,31 @@ public class HRService {
 Map<Company , List<Employee>> companyEmpList = new HashMap<>();
 
 Scanner sc = new Scanner(System.in);
-Company company;
+Company company = new Company();
+Employee employee = new Employee();
 
 public void add(){
 
-    System.out.println("Enter the details of the company");
-    company.addCompany();
+    int choice =0;
+    System.out.println("Enter your choice to perform a task");
+    System.out.println("Enter 1 to Add the details of the company");
+    System.out.println("Enter 2 to add an employee to the company");
+    System.out.println("Enter 3 to view the records of the employee for the company");
+    choice = sc.nextInt();
 
-    System.out.println("Enter the details of the employee");
+    switch (choice){
+        case 1:
+        {
+            company.addCompany();
+            break;
+
+        }
+        case 2:
+        {
+            employee.addEmployee();
+            break;
+        }
+    }
 
 
 }
@@ -25,6 +42,11 @@ public void add(){
 private void addEmployee(){
 
 }
+
+    public static void main(String[] args) {
+        HRService services = new HRService();
+        services.add();
+    }
 
 public static void removeEmployee(){}
 

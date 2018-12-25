@@ -15,6 +15,9 @@ public class Company {
         this.name = name;
     }
 
+    public Company() {
+    }
+
     public int getId() {
         return id;
     }
@@ -40,7 +43,7 @@ public class Company {
     }*/
 
     public Company addCompany(){
-        System.out.println("Please enter the id of the company");
+        System.out.print("Please enter the id of the company");
         id = sc.nextInt();
         System.out.println("Please enter the name of the company");
         name = sc.nextLine();
