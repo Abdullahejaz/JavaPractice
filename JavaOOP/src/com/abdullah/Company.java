@@ -43,9 +43,9 @@ public class Company {
     }*/
 
     public Company addCompany(){
-        System.out.print("Please enter the id of the company");
+        System.out.println("Please enter the id of the company");
         id = sc.nextInt();
-        System.out.println("Please enter the name of the company");
+        System.out.print("Please enter the name of the company");
         name = sc.nextLine();
 
         return new Company(id, name);
