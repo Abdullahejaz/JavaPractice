@@ -9,6 +9,9 @@ public class Role {
     //Check this line of code.
     public Scanner sc = new Scanner(System.in);
 
+    public Role() {
+    }
+
     public Role(int id, String name) {
         this.id = id;
         this.name = name;
@@ -38,8 +41,10 @@ public class Role {
         for(int i = 0; i<=count; i++){*/
             System.out.println("Please enter the role ID");
             id = sc.nextInt();
+            sc.nextLine();
             System.out.println("Please enter the name of the role");
             name = sc.nextLine();
+            sc.nextLine();
 
         return new Role(id, name);
 

@@ -10,11 +10,11 @@ public class Employee {
     private String firstName, lastName;
     List<Employee> listOfEmployee = new ArrayList<>();
     ArrayList<Role> listOfRoles = new ArrayList<>();
-    Phone phone;
-    Address address;
-    Role role;
-    String jobType;
-    JobType jt;
+    Phone phone = new Phone();
+    Address address = new Address();
+    Role role = new Role();
+    String jobInput;
+    JobType jobType;
     Contractor contractor;
     FullTime fullTime;
     Scanner sc = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public Employee(int id, String firstName, String lastName, ArrayList<Role> role, Phone phone,  Address address, JobType jt ) {
+    private Employee(int id, String firstName, String lastName, ArrayList<Role> role, Phone phone,  Address address, JobType jt ) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,6 +65,7 @@ public class Employee {
         id = sc.nextInt();
         System.out.println("Enter the first name of the Employee");
         firstName = sc.nextLine();
+        sc.nextLine();
         System.out.println("Enter the last name of the employee");
         lastName = sc.nextLine();
 
@@ -73,24 +74,24 @@ public class Employee {
 
         System.out.println("Enter the number of roles for the employee");
         int count = sc.nextInt();
-        for (int i = 0; i<=count; i++){
+        for (int i = 0; i<count; i++){
             listOfRoles.add(role.addRole());
         }
 
         System.out.println("Enter the type of job for the employee. The options are Full Time and Contractor");
 
-        jobType = sc.nextLine();
+        jobInput = sc.nextLine();
 
-        if(jobType.equalsIgnoreCase("Contractor")){
-            jt = contractor.addContractor();
+        if(jobInput.equalsIgnoreCase("Contractor")){
+            jobType = contractor.addContractor();
         }
-        else if(jobType.equalsIgnoreCase("Full Time")){
-            jt = fullTime.addFulltime();
+        else if(jobInput.equalsIgnoreCase("Full Time")){
+            jobType = fullTime.addFulltime();
         }
 
 
 
-        return new Employee(id, firstName, lastName, listOfRoles, tempPhone, tempAddress, jt);
+        return new Employee(id, firstName, lastName, listOfRoles, tempPhone, tempAddress, jobType);
     }
 }
 

@@ -8,6 +8,9 @@ public class Address {
     private String zip, country, state, city, line1, line2;
     private Scanner sc = new Scanner(System.in);
 
+    public Address() {
+    }
+
     public Address(int id, String zip, String country, String state, String city, String line1, String line2) {
         this.id = id;
         this.zip = zip;
@@ -80,6 +83,7 @@ public class Address {
         id = sc.nextInt();
         System.out.println("Enter the zip code");
         zip = sc.nextLine();
+        sc.nextLine();
         System.out.println("Enter the name of the country");
         country = sc.nextLine();
         System.out.println("Enter the name of the state");

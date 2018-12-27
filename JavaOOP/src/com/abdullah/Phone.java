@@ -11,11 +11,15 @@ public class Phone {
 
     public Scanner sc = new Scanner(System.in);
 
+    public Phone() {
+    }
+
     public Phone(int id, String areaCode, String number, String countryCode) {
         this.id = id;
         this.areaCode = areaCode;
         this.number = number;
         this.countryCode = countryCode;
+
     }
 
     public int getId() {
@@ -55,6 +59,7 @@ public class Phone {
         id = sc.nextInt();
         System.out.println("Enter the Area Coed");
         areaCode = sc.nextLine();
+        sc.nextLine();
         System.out.println("Enter the phone number");
         number = sc.nextLine();
         System.out.println("Enter the country code for the number");
